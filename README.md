@@ -7,10 +7,12 @@ A responsive website that helps users discover upcoming and recommended events.
 
 ## Take a look at the website
 ### Website
-![localhost_3000_ (23)](https://github.com/p-leena-reddy-111/EventUp/assets/105440491/fc062d12-2d12-4d68-9c33-25dbd865bd89)
+
+![localhost_3000_ (23)](https://github.com/p-leena-reddy-111/EventUp/assets/105440491/b21b398e-b138-4cfe-8969-556d082baf75)
 
 ### App
-![app-eventup](https://github.com/p-leena-reddy-111/EventUp/assets/105440491/ded78e63-2488-4117-b647-408071403cab)
+
+![app-eventup](https://github.com/p-leena-reddy-111/EventUp/assets/105440491/859d2d44-71b8-45c4-8a1d-4ad58a75151b)
 
 
 ## Tech Stack
