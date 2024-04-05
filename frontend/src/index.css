@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities{
+    .clip-custom {
+        clip-path: 
+            xywh(9% 7% 82% 86% round 2%)
+    }
+}
