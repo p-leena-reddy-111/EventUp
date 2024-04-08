@@ -5,7 +5,7 @@ A responsive website that helps users discover upcoming and recommended events.
 
 
 
-## Take a look at the website
+## Take a look at the website - https://upcomingevents.netlify.app/
 ### Website
 
 ![localhost_3000_ (23)](https://github.com/p-leena-reddy-111/EventUp/assets/105440491/b21b398e-b138-4cfe-8969-556d082baf75)
