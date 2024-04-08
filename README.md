@@ -31,5 +31,24 @@ A responsive website that helps users discover upcoming and recommended events.
 }
 
 
+## Installation
+
+Install my-project with npm
+
+```bash
+  git clone https://github.com/p-leena-reddy-111/EventUp
+  cd frontend
+  npm install 
+  npm install react-icons axios
+```
+Install TailwindCSS
+
+```bash
+  npm install -D tailwindcss postcss autoprefixer 
+  npx tailwindcss init
+  npm install tailwind-scrollbar-hide // to hide scroll bar
+```
+
+
 
 
