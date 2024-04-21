@@ -14,7 +14,7 @@ const HeaderNext = () => {
     const fileId = originalUrl.match(/\/file\/d\/([^/]+)/)[1];
 
     // Construct the thumbnail URL with the file ID and desired width
-    const thumbnailUrl = `https://drive.google.com/thumbnail?id=${fileId}&sz=w${width}-h${height}`;
+    const thumbnailUrl = `https://drive.google.com/thumbnail?id=${fileId}&sz=w${width}`;
     console.log(thumbnailUrl);
 
     return thumbnailUrl;
@@ -26,6 +26,7 @@ const HeaderNext = () => {
     setIsLoading(true);
     try
     {
+        
         const response=await axios.get("GitHub_Security_Issues_Cant_Include_Link");
         setShows(response.data);
 
@@ -44,7 +45,7 @@ const HeaderNext = () => {
   return (
     <div className='flex justify-center sm:mx-[20px] md:[60px] lg:mx-[130px] my-[20px]'>
         <div className='relative'>
-            <img className='relative w-full h-[800px] object-cover opacity-95' src={banner} alt="/"/>
+            <img className='relative w-full h-[800px] object-cover opacity-95' src={banner} alt="/" loading='lazy'/>
             <div className='hidden md:flex'>
                 <div className='absolute top-[70px] left-[30px] md:top-[160px] md:left-[160px] mx-auto text-white'>
                     <p className='items-center text-4xl lg:text-6xl mb-8'>Discover Exciting Events Happening</p>
@@ -73,12 +74,12 @@ const HeaderNext = () => {
                 </div>
             </div>
             {/*Desktop View*/}
-            <div className='absolute hidden md:flex top-[600px] left-40 mt-5'>
-                <div className='relative flex'>
+            <div className='absolute flex top-[600px] left-40 mt-5'>
+                <div className='relative hidden md:flex'>
                     <div className='flex w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
                         {
                             shows && shows.events.map((item,index) => (
-                                    <img className='h-full hover:scale-105 ease-in-out duration-300 clip-custom'src={generateThumbnailUrl(item.imgUrl,350,400)} alt={item.eventName} />
+                                    <img className='h-full hover:scale-105 ease-in-out duration-300 clip-custom' src={generateThumbnailUrl(item.imgUrl,300,380)} loading="lazy" />
                             ))
                             
                         }
@@ -91,23 +92,13 @@ const HeaderNext = () => {
                     <div className='flex w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide'>
                         {
                             shows && shows.events.map((item,index) => (
-                                    <img className='h-full hover:scale-105 ease-in-out duration-300 clip-custom'src={generateThumbnailUrl(item.imgUrl,350,400)} alt={item.eventName} />
+                                    <img className='h-full hover:scale-105 ease-in-out duration-300 clip-custom'src={generateThumbnailUrl(item.imgUrl,300,400)} alt={item.eventName} />
                             ))
                             
                         }
                     </div>
                 </div>
             </div>
-           {/* <div className='relative flex items-center gap-10'>
-                    <div className='relative flex w-full h-full overflow-x-visible whitespace-nowrap scroll-smooth scrollbar-hide'>
-                        {
-                            shows && shows.events.map((item,index) => (
-                                    <img className='w-full h-full'src={generateThumbnailUrl(item.imgUrl,400,600)} alt={item.eventName} />
-                            ))
-                            
-                        }
-                    </div>
-                    </div>*/}
         </div>  
     </div>
   )
